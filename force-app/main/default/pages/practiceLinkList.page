@@ -1,5 +1,7 @@
 <apex:page >
     <h1>練習用ページへのリンク集</h1>
 
-    <a href="">PRIVATE-2 apexでのページネーション実装についてまとめる</a>  
+    <apex:form>
+        <apex:commandButton value="PRIVATE-2 apexでのページネーション実装についてまとめる" action="{!URLFOR($Page.pagination)}" />
+    </apex:form>
 </apex:page>
