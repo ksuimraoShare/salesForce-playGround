@@ -1,3 +1,3 @@
-<apex:page>
+<apex:page controller="pagination">
     <h1>ページネーション練習用</h1>
 </apex:page>
