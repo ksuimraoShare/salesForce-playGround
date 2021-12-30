@@ -11,6 +11,16 @@ public with sharing class pagination {
         this.accResults = ssc.getRecords();
     }
     
+    public List<Integer> getPageNumList(){
+        List<Integer> resultList = new List<Integer>();
+        Integer endPageNum = this.ssc.getPageSize();
+
+        for(Integer i=1; i<=endPageNum; i++){
+            resultList.add(i);
+        }
+        return resultList;
+    }
+    
     public void goPrevious(){
         this.ssc.previous();
         this.accResults = ssc.getRecords();

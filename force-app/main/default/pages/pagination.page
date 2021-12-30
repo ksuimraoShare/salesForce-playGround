@@ -5,6 +5,12 @@
             <p>{!acc.Name}</p>
         </apex:dataList>
         
+        <div>
+            <apex:repeat value="{!pageNumList}" var="pageNum">
+                <apex:commandLink value="{!pageNum}" style="margin-left:10px;"/>
+            </apex:repeat>    
+        </div>
+
         <apex:commandLink action="{!goPrevious}" value="前へ"/>
         <apex:commandLink action="{!goNext}" value="次へ" style="margin-left:10px;"/>
     </apex:form>
