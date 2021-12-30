@@ -7,7 +7,9 @@
         
         <div>
             <apex:repeat value="{!pageNumList}" var="pageNum">
-                <apex:commandLink value="{!pageNum}" style="margin-left:10px;"/>
+                <apex:commandLink action="{!goClickNumPage}" value="{!pageNum}" style="margin-left:10px;">
+                    <apex:param value="{!pageNum}" name="clickNum"/>
+                </apex:commandLink>
             </apex:repeat>    
         </div>
 

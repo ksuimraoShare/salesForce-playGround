@@ -21,6 +21,14 @@ public with sharing class pagination {
         return resultList;
     }
     
+    public void goClickNumPage(){
+        String strClickNum = Apexpages.currentPage().getParameters().get('clickNum');
+        Integer clickNum = Integer.valueOf(strClickNum);
+
+        this.ssc.setPageNumber(clickNum);
+        this.accResults = this.ssc.getRecords();
+    }
+    
     public void goPrevious(){
         this.ssc.previous();
         this.accResults = ssc.getRecords();
