@@ -4,5 +4,7 @@
         <apex:dataList value="{!accResults}" var="acc">
             <p>{!acc.Name}</p>
         </apex:dataList>
+        
+        <apex:commandLink action="{!goNext}" value="次へ"/>
     </apex:form>
 </apex:page>
