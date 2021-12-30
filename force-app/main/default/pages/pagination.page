@@ -1,3 +1,8 @@
 <apex:page controller="pagination">
     <h1>ページネーション練習用</h1>
+    <apex:form>
+        <apex:dataList value="{!accResults}" var="acc">
+            <p>{!acc.Name}</p>
+        </apex:dataList>
+    </apex:form>
 </apex:page>
