@@ -11,6 +11,10 @@ public with sharing class pagination {
         this.accResults = ssc.getRecords();
     }
     
+    public void goPrevious(){
+        this.ssc.previous();
+        this.accResults = ssc.getRecords();
+    }
     public void goNext(){
         this.ssc.Next();
         this.accResults = ssc.getRecords();
