@@ -3,7 +3,7 @@ public with sharing class pagination {
     public List<Account> accResults {get; private set;}
 
     public pagination() {
-        List<Account> accList = [SELECT Name FROM Account];
+        List<Account> accList = [SELECT Name FROM Account ORDER BY CreatedDate DESC];
 
         this.ssc = new Apexpages.StandardSetController(accList);
         this.ssc.setPageSize(5);
