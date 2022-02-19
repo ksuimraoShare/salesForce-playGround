@@ -13,7 +13,9 @@ public with sharing class pagination {
     
     public List<Integer> getPageNumList(){
         List<Integer> resultList = new List<Integer>();
-        Integer endPageNum = this.ssc.getPageSize();
+        Decimal totalRecordSize = (Decimal)this.ssc.getResultSize();
+        Decimal endPageNumDec = totalRecordSize.divide(this.ssc.getPageSize(), 0, System.RoundingMode.UP);
+        Integer endPageNum = (Integer)endPageNumDec;
 
         for(Integer i=1; i<=endPageNum; i++){
             resultList.add(i);
