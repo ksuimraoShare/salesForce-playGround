@@ -1,0 +1,14 @@
+<apex:page controller="reRenderTest">
+    <h1>reRenderテスト</h1>
+    <apex:form id="formId">
+        <apex:outputText>{!testStr1}</apex:outputText>
+        <apex:commandButton reRender="formId" action="{!reRenderStrAction}" value="テストボタン" />
+        <!-- <apex:actionFunction reRender="formId" action="{!reRenderStrAction}" name="test" /> -->
+        <!-- <apex:outputText>test</apex:outputText> -->
+        <!-- <p>test</p> -->
+    </apex:form>
+    <apex:outputText>test</apex:outputText>
+    <!-- <form>
+        <input type="text" name="test" value="test" />
+    </form> -->
+</apex:page>
