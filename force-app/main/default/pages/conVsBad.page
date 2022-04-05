@@ -1,0 +1,4 @@
+<apex:page controller="conVsBad">
+    <p>2の方：{!ContactMethod2}</p>
+    <p>1の方：{!ContactMethod1}</p>
+</apex:page>

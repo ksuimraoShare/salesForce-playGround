@@ -1,7 +1,17 @@
-<apex:page >
+<apex:page>
     <h1>練習用ページへのリンク集</h1>
 
     <apex:form>
-        <apex:commandButton value="PRIVATE-2 apexでのページネーション実装についてまとめる" action="{!URLFOR($Page.pagination)}" />
+        <div>
+            <apex:commandButton value="apexでのページネーション実装についてまとめる" action="{!URLFOR($Page.pagination)}" />
+        </div>
+        <div>
+            <apex:commandButton value="reRenderTest" action="{!URLFOR($Page.reRenderTest)}" />
+        </div>
+        <div>
+            <apex:commandButton value="ゲッター・セッターの実行順序テスト" action="{!URLFOR($Page.conVsBad)}" />
+        </div>
+
+
     </apex:form>
 </apex:page>

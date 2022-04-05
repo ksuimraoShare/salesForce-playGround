@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>detail__c</fullName>
+    <externalId>false</externalId>
+    <label>従</label>
+    <referenceTo>detail__c</referenceTo>
+    <relationshipLabel>従の従</relationshipLabel>
+    <relationshipName>detail</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
