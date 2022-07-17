@@ -11,6 +11,7 @@ public with sharing class MoneyTest {
     private static void testEquality(){
         System.assert(new Dollar(5).equals(new Dollar(5)));
         System.assert(!new Dollar(5).equals(new Dollar(6)));
+
         System.assert(new Franc(5).equals(new Franc(5)));
         System.assert(!new Franc(5).equals(new Franc(6)));
     }

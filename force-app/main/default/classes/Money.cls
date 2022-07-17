@@ -3,7 +3,4 @@ public abstract with sharing class Money {
     public Money() {
 
     }
-    public Boolean equals(Money money){
-        return this.amount == money.amount;
-    }
 }
