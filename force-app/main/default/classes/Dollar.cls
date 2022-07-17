@@ -1,5 +1,4 @@
-public with sharing class Dollar {
-    public Integer amount;
+public with sharing class Dollar extends Money{
 
     public Dollar(Integer amount){
         this.amount = amount;
