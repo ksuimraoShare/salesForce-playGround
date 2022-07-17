@@ -7,8 +7,4 @@ public with sharing class Dollar extends Money{
     public Dollar times(Integer multiplier){
         return new Dollar(this.amount * multiplier);
     }
-    
-    public Boolean equals(Money money){
-        return this.amount == money.amount;
-    }
 }
