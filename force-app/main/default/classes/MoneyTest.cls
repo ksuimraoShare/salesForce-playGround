@@ -3,12 +3,14 @@ public with sharing class MoneyTest {
     @isTest
     private static void testMultiplication(){
         Dollar five = new Dollar(5);
-
-        Dollar product = five.times(2);
-        System.assertEquals(10, product.amount);
-        
-        product = five.times(3);
-        System.assertEquals(15, product.amount);
+        System.assertEquals(new Dollar(10).amount, five.times(2).amount);
+        System.assertEquals(new Dollar(15).amount, five.times(3).amount);
+    }
+    
+    @isTest
+    private static void testEquality(){
+        System.assert(new Dollar(5).equals(new Dollar(5)));
+        System.assert(!new Dollar(5).equals(new Dollar(6)));
     }
     
     @isTest
