@@ -12,15 +12,11 @@ public with sharing class MoneyTest {
         System.assert(new Dollar(5).equals(new Dollar(5)));
         System.assert(!new Dollar(5).equals(new Dollar(6)));
     }
-    
+
     @isTest
     private static void testFrancMultiplication(){
         Franc five = new Franc(5);
-
-        Franc product = five.times(2);
-        System.assertEquals(10, product.amount);
-        
-        product = five.times(3);
-        System.assertEquals(15, product.amount);
+        System.assertEquals(new Franc(10).amount, five.times(2).amount);
+        System.assertEquals(new Franc(15).amount, five.times(3).amount);
     }
 }

@@ -8,5 +8,8 @@ public with sharing class Franc {
     public Franc times(Integer multiplier){
         return new Franc(this.amount * multiplier);
     }
+    
+    public Boolean equals(Franc franc){
+        return this.amount == franc.amount;
+    }
 }
-
