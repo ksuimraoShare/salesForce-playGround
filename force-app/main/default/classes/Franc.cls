@@ -11,4 +11,8 @@ public with sharing class Franc extends Money{
     public Boolean equals(Franc franc){
         return this.amount == franc.amount;
     }
+
+    public override String currency(){
+        return 'CHF';
+    }
 }

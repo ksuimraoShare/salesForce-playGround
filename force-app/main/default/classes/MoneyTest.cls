@@ -22,4 +22,10 @@ public with sharing class MoneyTest {
         System.assertEquals(Money.Franc(10).amount, five.times(2).amount);
         System.assertEquals(Money.Franc(15).amount, five.times(3).amount);
     }
+    
+    @isTest
+    private static void testCurrency(){
+        System.assertEquals('USD', Money.dollar(1).currency());
+        System.assertEquals('CHF', Money.franc(1).currency());
+    }
 }

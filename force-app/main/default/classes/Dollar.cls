@@ -11,4 +11,8 @@ public with sharing class Dollar extends Money{
     public Boolean equals(Dollar dollar){
         return this.amount == dollar.amount;
     }
+    
+    public override String currency(){
+        return 'USD';
+    }
 }

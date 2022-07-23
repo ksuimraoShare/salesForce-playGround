@@ -9,6 +9,7 @@ public virtual with sharing class Money {
     }
 
     public virtual Money times(Integer multiplier){return new Money();}
+    public virtual String currency(){return '';}
 
     public Boolean equals(Money money){
         return this.amount == money.amount;
