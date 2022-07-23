@@ -2,11 +2,11 @@ public with sharing class Franc extends Money{
 
     public Franc(Integer amount, String currencyTdd){
         this.amount = amount;
-        super.currencyTdd = 'CHF';
+        super.currencyTdd = currencyTdd;
     }
     
     public override Money times(Integer multiplier){
-        return Money.Franc(this.amount * multiplier, null);
+        return Money.Franc(this.amount * multiplier);
     }
 
     public Boolean equals(Franc franc){

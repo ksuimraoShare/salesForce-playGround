@@ -6,8 +6,6 @@ public virtual with sharing class Money {
         return new Dollar(amount);
     }
     public static Franc franc(Integer amount){
-        return new Franc(amount);
-    public static Franc franc(Integer amount, String currencyTdd){
         return new Franc(amount, 'CHF');
     }
 
