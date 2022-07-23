@@ -4,7 +4,7 @@ public with sharing class Franc extends Money{
         this.amount = amount;
     }
     
-    public Franc times(Integer multiplier){
+    public override Money times(Integer multiplier){
         return new Franc(this.amount * multiplier);
     }
 

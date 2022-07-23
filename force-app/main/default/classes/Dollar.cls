@@ -4,7 +4,7 @@ public with sharing class Dollar extends Money{
         this.amount = amount;
     }
     
-    public Dollar times(Integer multiplier){
+    public override Money times(Integer multiplier){
         return new Dollar(this.amount * multiplier);
     }
 

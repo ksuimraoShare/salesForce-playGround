@@ -2,7 +2,7 @@
 public with sharing class MoneyTest {
     @isTest
     private static void testMultiplication(){
-        Dollar five = new Dollar(5);
+        Money five = new Dollar(5);
         System.assertEquals(new Dollar(10).amount, five.times(2).amount);
         System.assertEquals(new Dollar(15).amount, five.times(3).amount);
     }
