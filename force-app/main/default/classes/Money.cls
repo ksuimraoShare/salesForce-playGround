@@ -1,5 +1,6 @@
 public virtual with sharing class Money {
     @TestVisible protected Integer amount;
+    @TestVisible protected String currencyTdd;
     
     public static Money dollar(Integer amount){
         return new Dollar(amount);
@@ -9,7 +10,6 @@ public virtual with sharing class Money {
     }
 
     public virtual Money times(Integer multiplier){return new Money();}
-    public virtual String currency(){return '';}
 
     public Boolean equals(Money money){
         return this.amount == money.amount;

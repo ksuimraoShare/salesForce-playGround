@@ -25,7 +25,7 @@ public with sharing class MoneyTest {
     
     @isTest
     private static void testCurrency(){
-        System.assertEquals('USD', Money.dollar(1).currency());
-        System.assertEquals('CHF', Money.franc(1).currency());
+        System.assertEquals('USD', Money.dollar(1).currencyTdd);
+        System.assertEquals('CHF', Money.franc(1).currencyTdd);
     }
 }
