@@ -4,6 +4,9 @@ public virtual with sharing class Money {
     public static Money dollar(Integer amount){
         return new Dollar(amount);
     }
+    public static Franc franc(Integer amount){
+        return new Franc(amount);
+    }
 
     public virtual Money times(Integer multiplier){return new Money();}
 

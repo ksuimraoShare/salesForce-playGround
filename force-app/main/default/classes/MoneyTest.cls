@@ -12,14 +12,14 @@ public with sharing class MoneyTest {
         System.assert(Money.Dollar(5).equals(Money.Dollar(5)));
         System.assert(!Money.Dollar(5).equals(Money.Dollar(6)));
 
-        System.assert(new Franc(5).equals(new Franc(5)));
-        System.assert(!new Franc(5).equals(new Franc(6)));
+        System.assert(Money.Franc(5).equals(Money.Franc(5)));
+        System.assert(!Money.Franc(5).equals(Money.Franc(6)));
     }
 
     @isTest
     private static void testFrancMultiplication(){
-        Franc five = new Franc(5);
-        System.assertEquals(new Franc(10).amount, five.times(2).amount);
-        System.assertEquals(new Franc(15).amount, five.times(3).amount);
+        Money five = Money.Franc(5);
+        System.assertEquals(Money.Franc(10).amount, five.times(2).amount);
+        System.assertEquals(Money.Franc(15).amount, five.times(3).amount);
     }
 }
