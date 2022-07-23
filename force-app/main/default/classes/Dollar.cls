@@ -1,7 +1,9 @@
 public with sharing class Dollar extends Money{
+    private String currencyTdd;
 
     public Dollar(Integer amount){
         this.amount = amount;
+        this.currencyTdd = 'USD';
     }
     
     public override Money times(Integer multiplier){
@@ -13,6 +15,6 @@ public with sharing class Dollar extends Money{
     }
     
     public override String currency(){
-        return 'USD';
+        return this.currencyTdd;
     }
 }
