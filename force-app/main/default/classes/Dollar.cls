@@ -1,12 +1,12 @@
 public with sharing class Dollar extends Money{
 
-    public Dollar(Integer amount){
+    public Dollar(Integer amount, String currencyTdd){
         this.amount = amount;
-        super.currencyTdd = 'USD';
+        super.currencyTdd = currencyTdd;
     }
     
     public override Money times(Integer multiplier){
-        return new Dollar(this.amount * multiplier);
+        return Money.Dollar(this.amount * multiplier);
     }
 
     public Boolean equals(Dollar dollar){

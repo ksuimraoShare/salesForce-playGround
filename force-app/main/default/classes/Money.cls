@@ -3,7 +3,7 @@ public virtual with sharing class Money {
     @TestVisible protected String currencyTdd;
     
     public static Money dollar(Integer amount){
-        return new Dollar(amount);
+        return new Dollar(amount, 'USD');
     }
     public static Franc franc(Integer amount){
         return new Franc(amount, 'CHF');
