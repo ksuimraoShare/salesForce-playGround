@@ -23,5 +23,11 @@ public with sharing class MoneyTest {
     private static void testSimpleAddition(){
         Money sum = Money.dollar(5).plus(Money.dollar(5));
         System.assert(Money.Dollar(10).equals(sum));
+        
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, 'USD');
+        System.assertEquals(Money.Dollar(10), reduced);
     }
 }
