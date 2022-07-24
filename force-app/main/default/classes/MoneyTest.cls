@@ -18,4 +18,10 @@ public with sharing class MoneyTest {
         System.assertEquals('USD', Money.dollar(1).currencyTdd);
         System.assertEquals('CHF', Money.franc(1).currencyTdd);
     }
+    
+    @isTest
+    private static void testSimpleAddition(){
+        Money sum = Money.dollar(5).plus(Money.dollar(5));
+        System.assert(Money.Dollar(10).equals(sum));
+    }
 }

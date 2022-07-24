@@ -18,12 +18,17 @@ public virtual with sharing class Money {
     }
 
     @TestVisible
-    protected Money times(Integer multiplier){
+    private Money times(Integer multiplier){
         return new Money(this.amount * multiplier, this.currencyTdd);
     }
 
     public Boolean equals(Money money){
         return this.amount == money.amount
             && this.currencyTdd == money.currencyTdd;
+    }
+    
+    @TestVisible
+    private Money plus(Money addend){
+        return new Money(this.amount + addend.amount, this.currencyTdd);
     }
 }
