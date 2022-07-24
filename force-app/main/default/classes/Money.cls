@@ -17,7 +17,10 @@ public virtual with sharing class Money {
         return new Franc(amount, 'CHF');
     }
 
-    public virtual Money times(Integer multiplier){return new Money(null, null);}
+    @TestVisible
+    protected Money times(Integer multiplier){
+        return new Money(this.amount * multiplier, this.currencyTdd);
+    }
 
     public Boolean equals(Money money){
         return this.amount == money.amount
