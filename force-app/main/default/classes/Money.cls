@@ -11,10 +11,10 @@ public virtual with sharing class Money {
     }
     
     public static Money dollar(Integer amount){
-        return new Dollar(amount, 'USD');
+        return new Money(amount, 'USD');
     }
-    public static Franc franc(Integer amount){
-        return new Franc(amount, 'CHF');
+    public static Money franc(Integer amount){
+        return new Money(amount, 'CHF');
     }
 
     @TestVisible
