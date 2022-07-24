@@ -22,9 +22,20 @@ public with sharing class MoneyTest {
     @isTest
     private static void testSimpleAddition(){
         Money five = Money.dollar(5);
+
         Expression sum = five.plus(five);
         Bank bank = new Bank();
+
         Money reduced = bank.reduce(sum, 'USD');
         System.assert(Money.Dollar(10).equals(reduced));
+    }
+    
+    @isTest
+    private static void testPlusReturnsSum(){
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum) result;
+        System.assertEquals(five, sum.augend);
+        System.assertEquals(five, sum.addend);
     }
 }
