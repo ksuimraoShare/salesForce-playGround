@@ -20,6 +20,7 @@ public virtual with sharing class Money {
     public virtual Money times(Integer multiplier){return new Money(null, null);}
 
     public Boolean equals(Money money){
-        return this.amount == money.amount;
+        return this.amount == money.amount
+            && this.currencyTdd == money.currencyTdd;
     }
 }

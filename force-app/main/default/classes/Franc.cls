@@ -5,7 +5,7 @@ public with sharing class Franc extends Money{
     }
     
     public override Money times(Integer multiplier){
-        return Money.Franc(this.amount * multiplier);
+        return new Money(this.amount * multiplier, super.currencyTdd);
     }
 
     public Boolean equals(Franc franc){

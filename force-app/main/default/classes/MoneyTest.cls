@@ -28,4 +28,9 @@ public with sharing class MoneyTest {
         System.assertEquals('USD', Money.dollar(1).currencyTdd);
         System.assertEquals('CHF', Money.franc(1).currencyTdd);
     }
+    
+    @isTest
+    private static void testDifferentClassEquality(){
+        System.assert(new Money(10, 'CHF').equals(new Franc(10, 'CHF')));
+    }
 }
