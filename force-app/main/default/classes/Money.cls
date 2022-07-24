@@ -1,4 +1,4 @@
-public virtual with sharing class Money {
+public virtual with sharing class Money implements Expression{
     @TestVisible protected Integer amount;
     @TestVisible protected String currencyTdd;
     
@@ -28,7 +28,7 @@ public virtual with sharing class Money {
     }
     
     @TestVisible
-    private Money plus(Money addend){
+    private Expression plus(Money addend){
         return new Money(this.amount + addend.amount, this.currencyTdd);
     }
 }
