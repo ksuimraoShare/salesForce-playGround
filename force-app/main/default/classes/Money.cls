@@ -1,5 +1,5 @@
 public virtual with sharing class Money implements Expression{
-    @TestVisible protected Integer amount;
+    @TestVisible public Integer amount {get; private set;}
     @TestVisible protected String currencyTdd;
     
     //引数が空のコンストラクタがないとコンパイルエラーになるので、定義してある

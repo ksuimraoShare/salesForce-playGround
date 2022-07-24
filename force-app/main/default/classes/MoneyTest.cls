@@ -38,4 +38,12 @@ public with sharing class MoneyTest {
         System.assertEquals(five, sum.augend);
         System.assertEquals(five, sum.addend);
     }
+    
+    @isTest
+    private static void testReduceSum(){
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.reduce(sum, 'USD');
+        System.assertEquals(Money.dollar(7), result);
+    }
 }
