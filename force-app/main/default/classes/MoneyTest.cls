@@ -21,9 +21,6 @@ public with sharing class MoneyTest {
     
     @isTest
     private static void testSimpleAddition(){
-        Money sum = Money.dollar(5).plus(Money.dollar(5));
-        System.assert(Money.Dollar(10).equals(sum));
-        
         Money five = Money.dollar(5);
         Expression sum = five.plus(five);
         Bank bank = new Bank();
