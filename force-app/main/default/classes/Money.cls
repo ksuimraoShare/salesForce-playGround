@@ -29,6 +29,6 @@ public virtual with sharing class Money implements Expression{
     
     @TestVisible
     private Expression plus(Money addend){
-        return new Money(this.amount + addend.amount, this.currencyTdd);
+        return new Sum(this, addend);
     }
 }
