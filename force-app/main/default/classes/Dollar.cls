@@ -5,7 +5,7 @@ public with sharing class Dollar extends Money{
     }
     
     public override Money times(Integer multiplier){
-        return Money.Dollar(this.amount * multiplier);
+        return new Money(this.amount * multiplier, super.currencyTdd);
     }
 
     public Boolean equals(Dollar dollar){
