@@ -25,6 +25,6 @@ public with sharing class MoneyTest {
         Expression sum = five.plus(five);
         Bank bank = new Bank();
         Money reduced = bank.reduce(sum, 'USD');
-        System.assertEquals(Money.Dollar(10), reduced);
+        System.assert(Money.Dollar(10).equals(reduced));
     }
 }
