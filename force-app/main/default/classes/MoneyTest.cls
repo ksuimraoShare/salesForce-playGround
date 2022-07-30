@@ -53,4 +53,12 @@ public with sharing class MoneyTest {
         Money result = bank.reduce(Money.dollar(1),'USD');
         System.assert(Money.Dollar(1).equals(result));
     }
+    
+    @isTest
+    private static void testReduceMoneyDifferentCurrency(){
+        Bank bank = new Bank();
+        bank.addRate('CHF', 'USD', 2);
+        Money result = bank.reduce(Money.franc(2), 'USD');
+        System.assertEquals(Money.dollar(1), result);
+    }
 }
