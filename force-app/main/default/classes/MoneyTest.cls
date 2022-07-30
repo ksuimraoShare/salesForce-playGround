@@ -44,6 +44,6 @@ public with sharing class MoneyTest {
         Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
         Bank bank = new Bank();
         Money result = bank.reduce(sum, 'USD');
-        System.assertEquals(Money.dollar(7), result);
+        System.assert(Money.Dollar(7).equals(result));
     }
 }
