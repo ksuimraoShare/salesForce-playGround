@@ -59,6 +59,6 @@ public with sharing class MoneyTest {
         Bank bank = new Bank();
         bank.addRate('CHF', 'USD', 2);
         Money result = bank.reduce(Money.franc(2), 'USD');
-        System.assertEquals(Money.dollar(1), result);
+        System.assert(Money.Dollar(1).equals(result));
     }
 }
