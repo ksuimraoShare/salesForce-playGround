@@ -61,4 +61,9 @@ public with sharing class MoneyTest {
         Money result = bank.reduce(Money.franc(2), 'USD');
         System.assert(Money.Dollar(1).equals(result));
     }
+    
+    @isTest
+    private static void testArrayEquals(){
+        System.assertEquals(new List<String>{'abc'}, new List<String>{'abc'});
+    }
 }
