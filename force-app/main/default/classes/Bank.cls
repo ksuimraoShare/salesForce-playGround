@@ -1,4 +1,6 @@
 public with sharing class Bank {
+    private Map<Pair, Integer> rates = new Map<Pair,Integer>();
+
     @TestVisible
     private Money reduce(Expression source, String to){
         return source.reduce(this, to);
@@ -6,10 +8,11 @@ public with sharing class Bank {
     
     @TestVisible
     private void addRate(String fromCurrency, String toCurrency, Integer rate){
-
+        this.rates.put(new Pair(fromCurrency, toCurrency), rate);
     }
     
-    public Integer rate(String fromStr, String to){
-        return (fromStr.equals('CHF') && to.equals('USD')) ? 2 : 1;
+    public Integer rate(String fromCurrency, String toCurrency){
+        if(fromCurrency.equals(toCurrency)) return 1;
+        return this.rates.get(new Pair(fromCurrency, toCurrency));
     }
 }

@@ -63,7 +63,8 @@ public with sharing class MoneyTest {
     }
     
     @isTest
-    private static void testArrayEquals(){
-        System.assertEquals(new List<String>{'abc'}, new List<String>{'abc'});
+    private static void testIdentityRate(){
+        System.assertEquals(1, new Bank().rate('USD', 'USD'));
+
     }
 }
