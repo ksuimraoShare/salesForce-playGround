@@ -32,8 +32,8 @@ public virtual with sharing class Money implements Expression{
         return new Sum(this, addend);
     }
     
-    public Money reduce(String to){
-        Integer rate = (this.currencyTdd.equals('CHF') && to.equals('USD')) ? 2 : 1;
+    public Money reduce(Bank bank, String to){
+        Integer rate = bank.rate(this.currencyTdd, to);
         return new Money(this.amount / rate, to);
     }
 }
