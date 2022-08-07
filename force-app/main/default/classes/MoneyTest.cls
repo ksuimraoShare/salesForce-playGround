@@ -65,6 +65,16 @@ public with sharing class MoneyTest {
     @isTest
     private static void testIdentityRate(){
         System.assertEquals(1, new Bank().rate('USD', 'USD'));
+    }
+    
+    @isTest
+    private static void testMixedAddition(){
+        Money fiveBucks = Money.dollar(5);
+        Money tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate('CHF', 'USD', 2);
 
+        Money result = bank.reduce(fiveBucks.plus(tenFrancs), 'USD');
+        System.assert(Money.dollar(10).equals(result));
     }
 }
