@@ -4,16 +4,27 @@
         <apex:dataList value="{!accResults}" var="acc">
             <p>{!acc.Name}</p>
         </apex:dataList>
-        
+
         <div>
+            {!$Label.script}
+            <!-- <div id="script_div">
+            </div>
+            <script>
+                const script = document.createElement("script");
+                script.innerHTML = "{!jsScript}";
+
+                const script_div = document.getElementById("script_div");
+                script_div.appendChild(script);
+            </script> -->
+
             <apex:repeat value="{!pageNumList}" var="pageNum">
                 <apex:commandLink action="{!goClickNumPage}" value="{!pageNum}" style="margin-left:10px;">
-                    <apex:param value="{!pageNum}" name="clickNum"/>
+                    <apex:param value="{!pageNum}" name="clickNum" />
                 </apex:commandLink>
-            </apex:repeat>    
+            </apex:repeat>
         </div>
 
-        <apex:commandLink action="{!goPrevious}" value="前へ"/>
-        <apex:commandLink action="{!goNext}" value="次へ" style="margin-left:10px;"/>
+        <apex:commandLink action="{!goPrevious}" value="前へ" />
+        <apex:commandLink action="{!goNext}" value="次へ" style="margin-left:10px;" />
     </apex:form>
 </apex:page>

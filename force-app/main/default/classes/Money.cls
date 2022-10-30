@@ -18,7 +18,7 @@ public virtual with sharing class Money implements Expression{
     }
 
     @TestVisible
-    private Money times(Integer multiplier){
+    private Expression times(Integer multiplier){
         return new Money(this.amount * multiplier, this.currencyTdd);
     }
 
@@ -28,7 +28,7 @@ public virtual with sharing class Money implements Expression{
     }
     
     @TestVisible
-    private Expression plus(Money addend){
+    private Expression plus(Expression addend){
         return new Sum(this, addend);
     }
     

@@ -1,8 +1,8 @@
 public with sharing class Sum implements Expression{
-    @TestVisible public Money augend {get; private set;}
-    @TestVisible public Money addend {get; private set;}
+    @TestVisible public Expression augend {get; private set;}
+    @TestVisible public Expression addend {get; private set;}
     
-    public Sum(Money augend, Money addend){
+    public Sum(Expression augend, Expression addend){
         this.augend = augend;
         this.addend = addend;
     }

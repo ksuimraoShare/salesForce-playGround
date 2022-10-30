@@ -1,6 +1,8 @@
 public with sharing class pagination {
     private Apexpages.StandardSetController ssc ;
     public List<Account> accResults {get; private set;}
+    
+    public String jsScript {get; private set;}
 
     public pagination() {
         List<Account> accList = [SELECT Name FROM Account ORDER BY CreatedDate DESC];
@@ -9,6 +11,9 @@ public with sharing class pagination {
         this.ssc.setPageSize(5);
 
         this.accResults = ssc.getRecords();
+        
+        this.jsScript = 'console.log(\\"test\\");';
+        this.jsScript += 'console.log(\\"test\\");';
     }
     
     public List<Integer> getPageNumList(){
